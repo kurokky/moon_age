@@ -1,0 +1,93 @@
+@page {
+	margin: 0mm 5mm;
+	size: A4 landscape;
+}
+
+body{
+	margin:0;
+	width: 297mm;
+}
+
+main{
+	padding:0;
+	margin:0;
+}
+
+section{
+	padding-top: 5mm;
+	height: 210mm;
+	height:100vh;
+}
+
+header, footer{
+	display:none;
+}
+
+table{
+	-webkit-print-color-adjust: exact;
+	margin:0;
+	width:100%;
+	padding:0px;
+}
+
+td{
+	padding:0 8px 0px 8px;
+}
+
+tr:last-of-type td{
+  padding-bottom:8px !important;
+}
+
+tr:last-of-type td{
+	padding-bottom:4px;
+}
+
+td strong{
+  display:block;
+  font-size:130%;
+}
+
+td p span{
+  margin:auto 20px 0px 0px;
+}
+
+.sphere{
+	margin-top:-20px;
+}
+
+
+h1{
+	margin:0;
+	padding:0;
+}
+
+td[data-type="0"] .divider:after {
+    background-color:var(--color-dark);
+}
+
+td[data-type="1"] .divider{
+	background-color: var(--color-light);
+}
+td[data-type="2"] .divider, td[data-type="2"] .divider:after{
+	background-color: var(--color-light);
+}
+
+td[data-type="3"] .divider, td[data-type="3"] .divider:after{
+	background-color: var(--color-dark);
+}
+
+.color td[data-type="0"] .divider:after {
+    background-color:var(--moon-dark);
+}
+
+.color td[data-type="1"] .divider{
+	background-color: var(--moon-color);
+}
+
+.color td[data-type="2"] .divider, .color td[data-type="2"] .divider:after{
+	background-color: var(--moon-color);
+}
+
+.color td[data-type="3"] .divider, color td[data-type="3"] .divider:after{
+	background-color: var(--moon-dark);
+}

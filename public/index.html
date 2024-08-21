@@ -1,23 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<style>
-table img{
-  background:#f00;
-  width:78px !important;
-  height:78px !important;
-  margin-left:-42px !important;
-  border-radius:50% !important;
-}
-
-</style>
-
+<meta charset="UTF-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🌖</text></svg>">
+  <title>月齢カレンダーメーカー</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/print.css" media="print">
 </head>
 <body>
+<header>
+    <label><input type="radio" name="lang_type" value="kana" checked>ひらがな</label>
+    <label><input type="radio" name="lang_type" value="kanji">漢字</label>
+    <label style="margin-right:32px;"><input type="radio" name="lang_type" value="en">英語</label>
+    <input type="month" id="ym" name="ym" min="2022-04" max="2100-12" value="2024-08">
+    <input type="time" id="time" name="time" value="20:00">
+    <select name="term" id="term">
+      <option value="1">1ヶ月分</option>
+      <option value="6">半年分</option>
+      <option value="12">1年分</option>
+    </select>
+    <select name="color" id="color">
+      <option value="1">カラー</option>
+      <option value="0">モノクロ</option>
+    </select>
 
-<script>
-const 	
-
-</script>
-	
+    <select name="page" id="page">
+      <option value="0">通常印刷用で</option>
+      <option value="1">2up両面印刷用で</option>
+    </select>
+    <button onclick="displayCalendar()"> 作成 </button>
+</header>
+<main class="color"></main>
+<footer><p>&copy;kurokky A4用紙横向き印刷用に最適化しています。</p></footer>
+<script src="./js/holiday_jp.min.js"></script>
+<script src="./js/app.js"></script>
 </body>
 </html>
