@@ -117,7 +117,7 @@ td {
     color:var(--color-rest);
 }
 
-tr td.rest_day p strong{
+.color tr td.rest_day p strong{
     color:var(--color-rest) !important;
 }
 
