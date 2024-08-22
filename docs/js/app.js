@@ -171,7 +171,7 @@ function setMoonAge(time ,age){
   if (age.toFixed(0) == 15){
       time.textContent =  moonTypes[getLangType()]["full_moon"]
       time.classList.add("full_moon");
-    }else if (age.toFixed(0) == 0 || age.toFixed(0) == 30){
+    }else if (age.toFixed(0) == 0 || age.toFixed(0) == 30 || Math.floor(age) == 0){
       time.textContent = moonTypes[getLangType()]["new_moon"]
       time.classList.add("new_moon");
     }else{
