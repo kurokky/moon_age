@@ -88,6 +88,6 @@ td[data-type="3"] .divider, td[data-type="3"] .divider:after{
 	background-color: var(--moon-color);
 }
 
-.color td[data-type="3"] .divider, color td[data-type="3"] .divider:after{
+.color td[data-type="3"] .divider, .color td[data-type="3"] .divider:after{
 	background-color: var(--moon-dark);
 }

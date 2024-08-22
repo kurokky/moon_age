@@ -6,9 +6,12 @@
   <title>月齢カレンダーメーカー</title>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/print.css" media="print">
+  <script src="./js/holiday_jp.min.js"></script>
+  <script src="./js/app.js" defer></script>
 </head>
 <body>
 <header>
+    <h1>🌖 月齢カレンダーメーカー</h1>
     <label><input type="radio" name="lang_type" value="kana" checked>ひらがな</label>
     <label><input type="radio" name="lang_type" value="kanji">漢字</label>
     <label style="margin-right:32px;"><input type="radio" name="lang_type" value="en">英語</label>
@@ -23,7 +26,6 @@
       <option value="1">カラー</option>
       <option value="0">モノクロ</option>
     </select>
-
     <select name="page" id="page">
       <option value="0">通常印刷用で</option>
       <option value="1">2up両面印刷用で</option>
@@ -31,8 +33,6 @@
     <button onclick="displayCalendar()"> 作成 </button>
 </header>
 <main class="color"></main>
-<footer><p>&copy;kurokky A4用紙横向き印刷用に最適化しています。</p></footer>
-<script src="./js/holiday_jp.min.js"></script>
-<script src="./js/app.js"></script>
+<footer><p> A4用紙横向き印刷用に最適化しています。Developed by Kurokky.</p></footer>
 </body>
 </html>

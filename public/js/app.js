@@ -5,9 +5,9 @@ const indexs = {
 }
 
 const moonTypes = {
-  "kana":{"new_moon":"しんげつ","full_moon":"まんげつ"},
-  "kanji":{"new_moon":"新月","full_moon":"満月"},
-  "en":{"new_moon":"New moon","full_moon":"Full moon"},
+  "kana":{"new_moon":"しんげつ","full_moon":"まんげつ","half_moon":"はんげつ"},
+  "kanji":{"new_moon":"新月","full_moon":"満月","half_moon":"半月"},
+  "en":{"new_moon":"New moon","full_moon":"Full moon","half_moon":"Half moon"},
 }
 
 const moonAges = {
@@ -238,8 +238,11 @@ function displayCalendar(){
   const [hour, min]  = document.getElementById('time').value.split(":");
   const term = getTermType();
   const page = getPageType();
-  const pageAdd = page === 0 ? [...Array(term)].map((_, i) => i) : [0,2,1,3,4,6,5,7,8,10,9,11];
-  if (term === 6) pageAdd.splice(6, term);
+  let pageAdd = [0];
+  if (term > 1){
+    pageAdd = page === 0 ? [...Array(term)].map((_, i) => i) : [0,2,1,3,4,6,5,7,8,10,9,11];
+    if (term === 6) pageAdd.splice(6, term);
+  }
   for (let i of  pageAdd){
     const selectedDate = new Date(year, (month + i) - 1, 1, hour, min);
     const temp_year    = selectedDate.getFullYear();
